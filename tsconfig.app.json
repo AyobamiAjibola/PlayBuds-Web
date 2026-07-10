@@ -7,7 +7,7 @@
     /* Linting */
     "noUnusedLocals": true,
     "composite": true,
-    "noEmit": false,
+    "noEmit": true,
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
