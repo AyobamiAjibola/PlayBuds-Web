@@ -590,22 +590,14 @@ const handleSubmit = async (e: Event) => {
 
         <div class="relative z-10 flex flex-col items-center">
             <div class="flex justify-center items-center pt-20 flex-col w-full md:w-[60%] mt-20 px-4 md:px-0">
-                <Motion
-                    :initial="{ opacity: 0, y: 60 }"
-                    :animate="{ opacity: 1, y: 0 }"
-                    :transition="{
-                        duration: 0.7,
-                        ease: 'easeOut'
-                    }"
-                >
-                    <h1 class="text-6xl md:text-[72px] font-extrabold text-center">
-                        Find Your Game.
-                    </h1>
-                </Motion>
-                    <span class="text-center font-medium md:text-[24px] text-xl text-shadow-white mt-4 leading-6 md:leading-tight">
-                        PlayBudz connects you with players and pickup games near you. 
-                        Discover events, join a team, and never sit on the bench again — whatever sport you love.
-                    </span>
+               
+                <h1 class="text-6xl md:text-[72px] font-extrabold text-center">
+                    Find Your Game.
+                </h1>
+                <span class="text-center font-medium md:text-[24px] text-xl text-shadow-white mt-4 leading-6 md:leading-tight">
+                    PlayBudz connects you with players and pickup games near you. 
+                    Discover events, join a team, and never sit on the bench again — whatever sport you love.
+                </span>
                 
             </div>
         </div>
@@ -667,14 +659,24 @@ const handleSubmit = async (e: Event) => {
     </section>
 
     <section class="flex flex-col items-center md:px-12 px-6 scroll-mt-16" id="features">
-        <span class="text-[40px] md:text-[52px] font-extrabold mt-12 text-center leading-10 md:leading-15">
-            Everything You Need to <br/> Get on a Game
-        </span>
-        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 mt-12">
+         <Motion
+            :initial="{ opacity: 0, y: 60 }"
+            :animate="{ opacity: 1, y: 0 }"
+            :transition="{
+                duration: 0.7,
+                ease: 'easeOut'
+            }"
+            class="flex justify-center items-center"
+        >
+            <span class="text-[40px] md:text-[52px] font-extrabold mt-12 text-center leading-10 md:leading-15">
+                Everything You Need to <br/> Get on a Game
+            </span>
+        </Motion>
+        <div class="grid grid-cols-1 gap-10 md:grid-cols-2 mt-12">
             <div
                 v-for="(item, index) in phoneContent"
                 :key="`item-${index}`"
-                class="flex h-130 md:h-185 w-full flex-col rounded-[50px] px-6 md:px-10 shadow-sm justify-end overflow-hidden"
+                class="flex h-130 md:h-150 w-full md:w-110 flex-col rounded-[50px] px-6 md:px-10 shadow-sm justify-end overflow-hidden"
                 :style="{
                     background: `linear-gradient(to bottom, ${item.lighter} 20%, ${item.firstColor} 35%, ${item.secondColor} 100%)`,
                 }"
@@ -695,21 +697,31 @@ const handleSubmit = async (e: Event) => {
                 <img
                     :src="item.image"
                     alt="phone-image"
-                    class="h-auto w-123 object-cover md:mt-0 mt-6"
+                    class="h-auto w-123 object-contain md:mt-10 mt-6"
                 />
             </div>
         </div>
 
         <div class="flex justify-center items-center flex-col mt-8 gap-4">
-            <span class="text-[24px] text-center font-semibold">
-                Join over 500+ early members.
-            </span>
-            <Button
-                class="rounded-4xl bg-primary text-white py-2.5 px-6 text-[16px] font-semibold h-13.5 w-37.75"
-                @click="closeMenu"
+            <Motion
+                :initial="{ opacity: 0, y: 60 }"
+                :animate="{ opacity: 1, y: 0 }"
+                :transition="{
+                    duration: 0.7,
+                    ease: 'easeOut'
+                }"
+                class="flex justify-center items-center flex-col"
             >
-                Join Waitlist
-            </Button>
+                <span class="text-[24px] text-center font-semibold">
+                    Join over 500+ early members.
+                </span>
+                <Button
+                    class="rounded-4xl bg-primary text-white py-2.5 px-6 text-[16px] font-semibold h-13.5 w-37.75"
+                    @click="closeMenu"
+                >
+                    Join Waitlist
+                </Button>
+            </Motion>
         </div>
     </section>
 
