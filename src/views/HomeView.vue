@@ -717,7 +717,7 @@ const handleSubmit = async (e: Event) => {
                 </span>
                 <Button
                     class="rounded-4xl bg-primary text-white py-2.5 px-6 text-[16px] font-semibold h-13.5 w-37.75"
-                    @click="closeMenu"
+                    @click="handleOpenWaitlist"
                 >
                     Join Waitlist
                 </Button>
