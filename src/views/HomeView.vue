@@ -681,7 +681,7 @@ const handleSubmit = async (e: Event) => {
             <div
                 v-for="(item, index) in phoneContent"
                 :key="`item-${index}`"
-                class="flex h-135 md:h-150 w-full md:w-110 flex-col rounded-[50px] px-6 md:px-10 shadow-sm justify-end overflow-hidden"
+                class="flex h-135 md:h-150 w-full md:w-110 flex-col pt-6 rounded-[50px] px-6 md:px-10 shadow-sm justify-end overflow-hidden"
                 :style="{
                     background: `linear-gradient(to bottom, ${item.lighter} 20%, ${item.firstColor} 35%, ${item.secondColor} 100%)`,
                 }"
