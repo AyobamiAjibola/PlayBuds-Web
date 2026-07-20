@@ -391,7 +391,7 @@ const handleSubmit = async (e: Event) => {
             <DialogOverlay class="fixed inset-0 bg-black/50" />
 
             <DialogContent
-                class="z-999 mt-8 fixed left-1/2 top-1/3 w-[90%] max-w-lg -translate-x-1/2 -translate-y-1/2 rounded-3xl bg-[#F9F8F8] p-4"
+                class="z-999 mt-8 fixed left-1/2 top-1/3 md:top-1/2 w-[85%] max-w-lg -translate-x-1/2 -translate-y-1/2 rounded-3xl bg-[#F9F8F8] p-4"
             >
                 <div class="flex justify-end items-end">
                     <X
@@ -535,7 +535,7 @@ const handleSubmit = async (e: Event) => {
             <DialogOverlay class="fixed inset-0 bg-black/50" />
 
             <DialogContent
-                class="z-999 mt-8 fixed left-1/2 top-1/2 w-[90%] max-w-lg -translate-x-1/2 -translate-y-1/2 rounded-3xl bg-[#F9F8F8] p-4"
+                class="z-999 mt-8 fixed left-1/2 top-1/2 w-[85%] max-w-lg -translate-x-1/2 -translate-y-1/2 rounded-3xl bg-[#F9F8F8] p-4"
             >
                 <div class="flex justify-end items-end">
                     <X
@@ -604,7 +604,6 @@ const handleSubmit = async (e: Event) => {
                     PlayBudz connects you with players and pickup games near you. 
                     Discover events, join a team, and never sit on the bench again — whatever sport you love.
                 </span>
-                
             </div>
         </div>
     </section>
