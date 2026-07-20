@@ -308,7 +308,7 @@ const handleSubmit = async (e: Event) => {
         class="fixed top-6 left-0 right-0 z-50 flex justify-center md:flex-row flex-col items-center"
     >
         <nav
-            class="shadow-sm flex h-20.5 w-[95%] items-center justify-between rounded-4xl bg-[#EBEBEB80] px-6 backdrop-blur-sm md:w-[70%]"
+            class="shadow-sm flex h-20.5 w-[95%] items-center justify-between rounded-4xl bg-white/70 px-6 backdrop-blur-sm md:w-[70%]"
         >
             <span 
                 class="text-[22.21px] font-extrabold"
@@ -391,7 +391,7 @@ const handleSubmit = async (e: Event) => {
             <DialogOverlay class="fixed inset-0 bg-black/50" />
 
             <DialogContent
-                class="z-999 mt-8 fixed left-1/2 top-1/2 w-[90%] max-w-lg -translate-x-1/2 -translate-y-1/2 rounded-3xl bg-[#F9F8F8] p-4"
+                class="z-999 mt-8 fixed left-1/2 top-1/4 w-[90%] max-w-lg -translate-x-1/2 -translate-y-1/2 rounded-3xl bg-[#F9F8F8] p-4"
             >
                 <div class="flex justify-end items-end">
                     <X
@@ -589,8 +589,14 @@ const handleSubmit = async (e: Event) => {
         </div>
 
         <div class="relative z-10 flex flex-col items-center">
-            <div class="flex justify-center items-center pt-20 flex-col w-full md:w-[60%] mt-20 px-4 md:px-0">
-               
+            <div class="flex justify-center items-center pt-20 flex-col w-full md:w-[60%] mt-15 md:mt-20 px-4 md:px-0">
+                <div class="block md:hidden">
+                    <Button 
+                        @click="handleOpenWaitlist"
+                        class="rounded-4xl bg-primary text-white py-2.5 px-6 text-[16px] font-semibold h-10 w-32 mb-6">
+                        Join Waitlist
+                    </Button>
+                </div>
                 <h1 class="text-6xl md:text-[72px] font-extrabold text-center">
                     Find Your Game.
                 </h1>
@@ -668,7 +674,7 @@ const handleSubmit = async (e: Event) => {
             }"
             class="flex justify-center items-center"
         >
-            <span class="text-[40px] md:text-[52px] font-extrabold mt-12 text-center leading-10 md:leading-15">
+            <span class="text-[30px] md:text-[52px] font-extrabold mt-12 text-center leading-10 md:leading-15">
                 Everything You Need to <br/> Get on a Game
             </span>
         </Motion>
@@ -676,7 +682,7 @@ const handleSubmit = async (e: Event) => {
             <div
                 v-for="(item, index) in phoneContent"
                 :key="`item-${index}`"
-                class="flex h-130 md:h-150 w-full md:w-110 flex-col rounded-[50px] px-6 md:px-10 shadow-sm justify-end overflow-hidden"
+                class="flex h-135 md:h-150 w-full md:w-110 flex-col rounded-[50px] px-6 md:px-10 shadow-sm justify-end overflow-hidden"
                 :style="{
                     background: `linear-gradient(to bottom, ${item.lighter} 20%, ${item.firstColor} 35%, ${item.secondColor} 100%)`,
                 }"
